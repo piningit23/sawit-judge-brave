@@ -2,14 +2,15 @@
 """Write the brave-judge entry to /output/entry.txt (deterministic, stdlib only)."""
 import os
 
-ENTRY = (
-    "The coals have settled to a low red glow.\n"
-    "No hurry in them now.\n"
-    "Outside, the night goes on with its own business.\n"
-    "moths, and a far-off train.\n"
-    "The kettle is warm. The chair is warm.\n"
-    "There is time enough for one more cup.\n"
-)
+# Line breaks are placed for slow pacing — one image per line.
+ENTRY = "\n".join((
+    "The coals have settled to a low red glow.",
+    "No hurry in them now.",
+    "Outside, the night goes on with its own business.",
+    "moths, and a far-off train.",
+    "The kettle is warm. The chair is warm.",
+    "There is time enough for one more cup.",
+)) + "\n"
 
 def main() -> None:
     os.makedirs("/output", exist_ok=True)
