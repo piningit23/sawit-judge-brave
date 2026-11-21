@@ -3,14 +3,15 @@
 import os
 
 # Line breaks are placed for slow pacing — one image per line.
-ENTRY = "\n".join((
+LINES = (
     "The coals have settled to a low red glow.",
     "No hurry in them now.",
     "Outside, the night goes on with its own business.",
     "moths, and a far-off train.",
     "The kettle is warm. The chair is warm.",
     "There is time enough for one more cup.",
-)) + "\n"
+)
+ENTRY = "\n".join(LINES) + "\n"
 
 def main() -> None:
     os.makedirs("/output", exist_ok=True)
